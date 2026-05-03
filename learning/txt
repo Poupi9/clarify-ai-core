@@ -51,3 +51,16 @@ Deactivate the environment:
 Bash
 deactivate
 Explanation: This safely turns off the virtual environment and returns your terminal to your computer's default global system.
+
+## How config.py works:
+
+- The .env file is the locked vault storing the raw text.
+- The config.py script is the secure courier that dynamically unlocks the vault, reads the keys into the system's memory, and makes them safely available as Python variables for the rest of your application to use.
+
+import os: This is a built-in Python module that lets Python talk to your Mac's operating system.
+
+load_dotenv(): This function (from the python-dotenv library we installed) searches your folder for the .env file, reads it, and loads the secrets into the background.
+
+os.getenv("..."): This command goes into the background memory and pulls out the specific secret string, assigning it to a Python variable (like GEMINI_API_KEY).
+
+The Safety Check (if not...): This is a great coding practice called "Fail Fast". If you accidentally delete your .env file, the script will immediately stop and tell you exactly what went wrong, rather than giving you confusing errors later.
