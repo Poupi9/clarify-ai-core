@@ -1,14 +1,19 @@
 import json
 import os
 
-Goal: Read the text from your JSON file and convert it into a structured Python format (List of Dictionaries) so our code can manipulate it.
-Assumption: You named your file raw_data.json instead of synthetic_notes.json. The code below reflects this.
-Limitation: The file must contain valid JSON. If Claude added any markdown text (like ```json) inside the file itself, the script will crash.
+def load_synthetic_data(file_path="data/raw_data.json"):
+    if not os.path.exists(file_path):
+        raise FileNotFoundError(f"ERROR: The file '{file_path}' does not exist.")
+    with open(file_path, "r", encoding="utf-8") as file:
+        data = json.load(file)
 
-- Import Python's built-in json module.
-- Import Python's built-in os module. (We will use this to verify the file exists).
-- Define a function named load_synthetic_data.
-- Give this function a single parameter named file_path.
-- Set a default value for file_path pointing to your JSON file: "data/raw_data.json".
+    return data
 
-def
+##test
+if __name__ == "__main__":
+    try:
+        notes = load_synthetic_data()
+        print(f"✅ Successfully loaded {len(notes)} notes.")
+        print(f"🔍 First note ID: {notes[0].get('id')} | {notes[0].get('content_raw')}")
+    except Exception as e:
+        print(e)
