@@ -44,15 +44,24 @@ def evaluate_category(data_dict):
 
 
 def evaluate_length(data_dict):
+    original_len = len(data_dict.get("original", ""))
+    nvc_len = len(data_dict.get("nvc", ""))
 
-    original = data_dict.get("original")
-    nvc = data_dict.get("nvc")
+    # Define multipliers based on input size
+    if original_len < 100:
+        max_ratio, min_ratio = 3.0, 0.5  # Short text needs more 'room' to expand
+    else:
+        max_ratio, min_ratio = 1.8, 0.8  # Long text should stay closer to original length
 
-    if len(original) >= 150 and (len(nvc) < len(original) * 1.5 or len(nvc) > len(original) * 0.7):
+    # THE FIX: Use 'and' to ensure it stays within the bracket
+    is_not_too_long = nvc_len <= (original_len * max_ratio)
+    is_not_too_short = nvc_len >= (original_len * min_ratio)
+
+    if is_not_too_long and is_not_too_short:
         return True
-    if len(original) < 100 and (len(nvc) < len(original) * 2 or len(nvc) > len(original) * 0.5):
-        return True
-    return False
+    else:
+        print(f"🚨 LENGTH ERROR: Original({original_len}) vs NVC({nvc_len})")
+        return False
 
 if __name__ == "__main__":
     sample_data = {"original": "I'm mad", "nvc": "I feel frustrated", "mood_category": "joy_affection"}
