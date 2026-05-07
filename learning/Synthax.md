@@ -9,3 +9,4 @@
 *   **`try...except`** : Used to safely execute code that might fail. If an error occurs inside the `try` block, the program doesn't crash; instead, it jumps to the `except` block to handle the error gracefully.
 *   **`len(...)`** : Used to calculate the length (total count) of items inside a list. We used it to verify we loaded exactly 50 notes.
 *   **`.get('id')`** : Used to safely retrieve a specific value from a dictionary using its key. If the key 'id' doesn't exist, it simply returns `None` instead of crashing the program.
+*   **`json.loads()`** is a tool used to turn a String into a Dictiona
