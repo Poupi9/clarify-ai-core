@@ -142,3 +142,54 @@ Imagine your computer is a massive workshop.
 
 ### **5. Your "Golden Rule" as a Developer**
 > **Never `pip install` without seeing `(venv)` at the start of your terminal line.**
+
+
+---
+
+## How the Main Program Works
+
+The `main.py` script acts as an automated pipeline that coordinates data loading, AI execution, quality control, and file writing in a continuous loop.
+
+* **Step 1: Data Ingestion:** The script reads your `data/raw_data.json` file to load your synthetic dataset into memory.
+* **Step 2: Orchestrated Loop:** It iterates over each note using `enumerate()`. For each note, it performs three operations:
+* **API Execution:** It injects the raw text into your strict JSON system prompt template and transmits it to Gemini.
+* **Data Parsing:** It automatically cleans markdown tags and extracts the text into a Python dictionary.
+* **Quality Inspection:** It runs the dictionary through your three validation rules (Schema structure, Predefined category alignment, and Character length boundaries).
+
+
+* **Step 3: State Persistence:** It creates a consolidated ledger entry containing the validation flags and saves the progress after each item.
+* **Step 4: Final Export:** It writes the accumulated dataset into a permanent spreadsheet format when the loop terminates.
+
+---
+
+## Pandas DataFrame
+
+A **Pandas DataFrame** is like a supercharged spreadsheet you can use in Python. It's a table (just like Excel or Google Sheets) with rows and columns, but you can analyze, filter, clean, and transform huge datasets with just a few lines of code.
+
+**Why use a DataFrame?**
+- It makes it easy to load data from CSV, Excel, or databases.
+- You can quickly find, filter, or summarize information (e.g., get all rows where status is "SUCCESS").
+- You can calculate averages, sums, or split/group your data in powerful ways.
+- It’s the industry standard for Python data analysis and AI workflow.
+
+**Typical Workflow:**
+1. Install pandas:
+   ```
+   pip install pandas
+   pip freeze > requirements.txt
+   ```
+2. Create or load a DataFrame (from a CSV, JSON, etc.).
+3. Analyze or process your data in Python.
+4. Save the results back to a file.
+
+**Example:**
+```python
+import pandas as pd
+df = pd.read_csv("results/eval_report_v1.csv")
+print(df.head())  # Shows the first 5 rows of your spreadsheet!
+```
+
+In summary:  
+> Use a Pandas DataFrame when you want to analyze data with Python as easily as you would with Excel, but with way more power, flexibility, and speed!
+
+## 

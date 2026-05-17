@@ -1,0 +1,302 @@
+[
+    {
+      "id": "synthetic-001",
+      "content_raw": "I honestly can't stand it when he just leaves his dishes in the sink. It makes me feel like his maid. Does he even respect my time?",
+      "target_emotion": "ANGER_HOSTILITY",
+      "length": "short"
+    },
+    {
+      "id": "synthetic-002",
+      "content_raw": "She remembered I don't like cilantro. We were at this random taco place and she specifically asked them to hold it on mine. It's such a small thing but it made me feel so seen. Like she actually pays attention to me, you know? I don't think I've ever had someone care about the little things like that.",
+      "target_emotion": "GRATITUDE_APPRECIATION",
+      "length": "medium"
+    },
+    {
+      "id": "synthetic-003",
+      "content_raw": "why does she always laugh harder at marks jokes than mine?? like i see you",
+      "target_emotion": "JEALOUSY_INSECURITY",
+      "length": "short"
+    },
+    {
+      "id": "synthetic-004",
+      "content_raw": "I keep thinking about what happens if this doesn't work out. Like, I'm 34 now. If we break up, do I start over? Do I have time to find someone else, fall in love again, build a life? Sometimes I stay because I'm terrified of the alternative. Is that fair to him? Is that fair to me? I don't even know if I'm staying because I love him or because I'm scared of being alone. And that thought keeps me up at night. What if I'm wasting both of our lives because I'm too afraid to admit this isn't right?",
+      "target_emotion": "EXISTENTIAL_FEAR",
+      "length": "long"
+    },
+    {
+      "id": "synthetic-005",
+      "content_raw": "He's been distant for three weeks now. Won't tell me what's wrong. Just says 'I'm fine' but he's clearly not fine. I miss him even though he's right here.",
+      "target_emotion": "SADNESS_LONELINESS",
+      "length": "medium"
+    },
+    {
+      "id": "synthetic-006",
+      "content_raw": "I TOLD HIM THREE TIMES I had that presentation today and he still forgot to ask how it went. THREE TIMES.",
+      "target_emotion": "ANGER_HOSTILITY",
+      "length": "short"
+    },
+    {
+      "id": "synthetic-007",
+      "content_raw": "She held my hand at my grandmother's funeral without me having to ask. She just knew. She's always known what I need before I do.",
+      "target_emotion": "GRATITUDE_APPRECIATION",
+      "length": "short"
+    },
+    {
+      "id": "synthetic-008",
+      "content_raw": "I saw his ex liked three of his Instagram posts today. Why do I even check this stuff? I know it means nothing but here I am at 2am scrolling through her profile like a psycho. She's prettier than me. More successful. Why did they even break up? What if he regrets it?",
+      "target_emotion": "JEALOUSY_INSECURITY",
+      "length": "medium"
+    },
+    {
+      "id": "synthetic-009",
+      "content_raw": "There are moments when I look at her and I don't recognize who we've become. We used to talk about everything. Now we just talk about bills and whose turn it is to buy groceries. When did we stop being us? I'm scared we're becoming roommates who share a bed. I'm scared I'm going to wake up one day and realize we've been strangers for years. What if we can't find our way back?",
+      "target_emotion": "EXISTENTIAL_FEAR",
+      "length": "long"
+    },
+    {
+      "id": "synthetic-010",
+      "content_raw": "Tonight we sat in silence for 45 minutes. Both on our phones. Not angry silence, just... empty silence. I wanted to cry but I didn't even have the energy.",
+      "target_emotion": "SADNESS_LONELINESS",
+      "length": "short"
+    },
+    {
+      "id": "synthetic-011",
+      "content_raw": "He promised he'd stop drinking so much and last night he came home wasted AGAIN. I'm done making excuses for him. I'm done being the only adult in this relationship.",
+      "target_emotion": "ANGER_HOSTILITY",
+      "length": "medium"
+    },
+    {
+      "id": "synthetic-012",
+      "content_raw": "This morning I was spiraling about work stuff, completely in my head, and she made me my coffee exactly how I like it (oat milk, extra foam, tiny bit of honey) and kissed my forehead and said 'you're going to be amazing today.' I actually cried a little. She's my person.",
+      "target_emotion": "GRATITUDE_APPRECIATION",
+      "length": "medium"
+    },
+    {
+      "id": "synthetic-013",
+      "content_raw": "his coworker sarah texted him at 10pm about a 'project' yeah ok",
+      "target_emotion": "JEALOUSY_INSECURITY",
+      "length": "short"
+    },
+    {
+      "id": "synthetic-014",
+      "content_raw": "We haven't had sex in two months. Every time I try to initiate, there's an excuse. Too tired, too stressed, not feeling well. I know I should talk to her about it but what if she says she's not attracted to me anymore? What if this is the beginning of the end and I'm just too scared to see it? My parents got divorced after years of sleeping in separate rooms. Is that us in five years? Ten? I don't want to be one of those couples who stays together out of habit.",
+      "target_emotion": "EXISTENTIAL_FEAR",
+      "length": "long"
+    },
+    {
+      "id": "synthetic-015",
+      "content_raw": "I feel like I'm mourning someone who's still alive. He's right there but I miss who he used to be. Who we used to be.",
+      "target_emotion": "SADNESS_LONELINESS",
+      "length": "short"
+    },
+    {
+      "id": "synthetic-016",
+      "content_raw": "She said my anxiety is 'exhausting' to deal with. Like I WANT to be like this? Like I'm doing this on purpose? Screw her honestly.",
+      "target_emotion": "ANGER_HOSTILITY",
+      "length": "short"
+    },
+    {
+      "id": "synthetic-017",
+      "content_raw": "He learned how to make my mom's soup recipe. He spent three hours on the phone with her getting it exactly right because I mentioned I was missing home. I don't have words for how much that means to me. He didn't have to do that. He chose to.",
+      "target_emotion": "GRATITUDE_APPRECIATION",
+      "length": "medium"
+    },
+    {
+      "id": "synthetic-018",
+      "content_raw": "Why does she always bring up her ex when we're with MY friends? 'Oh Jake used to take me to this place' 'Jake and I went there once' like cool do you want to call Jake instead?",
+      "target_emotion": "JEALOUSY_INSECURITY",
+      "length": "medium"
+    },
+    {
+      "id": "synthetic-019",
+      "content_raw": "I'm turning 40 next year and we still haven't talked about kids. Every time I bring it up, he changes the subject. I think he doesn't want them. I think I do. Where does that leave us? I love him so much but I can't shake this feeling that I'm going to have to choose between him and the life I always imagined. My sister just had her second baby and I held her and felt this ache in my chest. What if I resent him in ten years? What if I resent myself for staying? How do you choose between love and everything else you wanted?",
+      "target_emotion": "EXISTENTIAL_FEAR",
+      "length": "long"
+    },
+    {
+      "id": "synthetic-020",
+      "content_raw": "We used to stay up all night talking. Now I can't remember the last time we had a real conversation. Just logistics. Just surface level stuff. I'm lonely in my own relationship.",
+      "target_emotion": "SADNESS_LONELINESS",
+      "length": "medium"
+    },
+    {
+      "id": "synthetic-021",
+      "content_raw": "He snapped at me in front of his parents for literally no reason. Embarrassed me at THEIR dinner table. We're gonna have words when we get home.",
+      "target_emotion": "ANGER_HOSTILITY",
+      "length": "short"
+    },
+    {
+      "id": "synthetic-022",
+      "content_raw": "She built me a playlist. 47 songs, perfectly curated. It had songs from when we first met, songs that remind her of me, songs for when I'm sad, songs for when I'm happy. She made me a whole soundtrack to our relationship and I've listened to it probably 100 times already.",
+      "target_emotion": "GRATITUDE_APPRECIATION",
+      "length": "medium"
+    },
+    {
+      "id": "synthetic-023",
+      "content_raw": "Am I crazy or is he definitely flirting with the new bartender at our regular spot? The way he laughs at everything she says. He doesn't laugh like that with me anymore.",
+      "target_emotion": "JEALOUSY_INSECURITY",
+      "length": "medium"
+    },
+    {
+      "id": "synthetic-024",
+      "content_raw": "i dont know if im in love with her or just terrified of starting over",
+      "target_emotion": "EXISTENTIAL_FEAR",
+      "length": "short"
+    },
+    {
+      "id": "synthetic-025",
+      "content_raw": "He said 'I love you' this morning and I couldn't say it back. Not because I don't love him but because I felt nothing when he said it. It was just words. When did it become just words?",
+      "target_emotion": "SADNESS_LONELINESS",
+      "length": "medium"
+    },
+    {
+      "id": "synthetic-026",
+      "content_raw": "SHE CANCELLED OUR ANNIVERSARY DINNER FOR A WORK THING. Our FIFTH anniversary. Says I'm being 'unreasonable' for being upset. Unbelievable.",
+      "target_emotion": "ANGER_HOSTILITY",
+      "length": "short"
+    },
+    {
+      "id": "synthetic-027",
+      "content_raw": "I had a panic attack at Target today (long story) and he dropped everything at work, drove 20 minutes, found me sitting in my car hyperventilating, and just held me until I could breathe again. Didn't ask questions. Didn't make me explain. Just showed up. That's love, right? That's what it looks like.",
+      "target_emotion": "GRATITUDE_APPRECIATION",
+      "length": "medium"
+    },
+    {
+      "id": "synthetic-028",
+      "content_raw": "She's been 'working late' with her boss four times this week. Four. Times. Maybe I'm paranoid but my gut is screaming at me.",
+      "target_emotion": "JEALOUSY_INSECURITY",
+      "length": "short"
+    },
+    {
+      "id": "synthetic-029",
+      "content_raw": "Everyone around us is getting married or having babies and we're just... here. Stuck. He won't talk about the future. Every time I try, he says 'let's just enjoy the present.' But I'm 32 and I need to know if we're building toward something or if I'm wasting my time. God, even typing that makes me feel awful. Like I'm reducing him to a timeline. But aren't timelines important? Don't I deserve to know if he sees a future with me? We've been together for four years. FOUR YEARS. When is it okay to ask for more? When does patience become settling?",
+      "target_emotion": "EXISTENTIAL_FEAR",
+      "length": "long"
+    },
+    {
+      "id": "synthetic-030",
+      "content_raw": "I told him I was depressed and he said 'just try to be more positive' and I've never felt more alone in my life.",
+      "target_emotion": "SADNESS_LONELINESS",
+      "length": "short"
+    },
+    {
+      "id": "synthetic-031",
+      "content_raw": "I asked her to please stop talking to me like I'm stupid and she rolled her eyes. Actually rolled her eyes at me. I'm not doing this anymore.",
+      "target_emotion": "ANGER_HOSTILITY",
+      "length": "short"
+    },
+    {
+      "id": "synthetic-032",
+      "content_raw": "He surprised me with tickets to see my favorite band. I mentioned ONCE three months ago that I wanted to see them live and he remembered. He remembered and he made it happen. We danced like idiots in the crowd and I've never felt more alive, more seen, more loved. These are the moments I want to remember when things get hard.",
+      "target_emotion": "GRATITUDE_APPRECIATION",
+      "length": "long"
+    },
+    {
+      "id": "synthetic-033",
+      "content_raw": "I'm not trying to be controlling but why does he need to text his friend Emily every single day? What do they even talk about?",
+      "target_emotion": "JEALOUSY_INSECURITY",
+      "length": "short"
+    },
+    {
+      "id": "synthetic-034",
+      "content_raw": "What if this is as good as it gets? What if I'm supposed to feel more? I see other couples and they seem so... alive. So connected. We're comfortable but is comfortable enough? I don't want to be 50 years old wondering what if. But I also don't want to throw away something good because I'm chasing some fantasy version of love that doesn't exist. How do you know the difference between settling and being realistic?",
+      "target_emotion": "EXISTENTIAL_FEAR",
+      "length": "medium"
+    },
+    {
+      "id": "synthetic-035",
+      "content_raw": "She went to bed without saying goodnight. Third time this week. Such a small thing but it hurts so much.",
+      "target_emotion": "SADNESS_LONELINESS",
+      "length": "short"
+    },
+    {
+      "id": "synthetic-036",
+      "content_raw": "He keeps making 'jokes' about my weight and when I told him it hurts he said I'm too sensitive. No. He's being cruel and calling it humor.",
+      "target_emotion": "ANGER_HOSTILITY",
+      "length": "medium"
+    },
+    {
+      "id": "synthetic-037",
+      "content_raw": "I was sick with the flu for a week and she took care of me without complaint. Brought me soup, refilled my water, let me watch my trashy reality shows, didn't make me feel gross even though I definitely was. She's the best person I know.",
+      "target_emotion": "GRATITUDE_APPRECIATION",
+      "length": "medium"
+    },
+    {
+      "id": "synthetic-038",
+      "content_raw": "He still has pictures of his ex on his Instagram. Not even archived. Just there. Am I supposed to just be okay with that?",
+      "target_emotion": "JEALOUSY_INSECURITY",
+      "length": "short"
+    },
+    {
+      "id": "synthetic-039",
+      "content_raw": "I think about leaving at least once a week. Not because I hate him. Not even because he's done anything specifically wrong. But because I look at our life and I can see exactly how the next 40 years will go and it feels like a slow fade to gray. Same conversations. Same routines. Same everything. Is this really it? Is this all there is? I imagined adventure and passion and growth and instead I have... comfort. Safety. Predictability. And maybe that's what love is supposed to become but god it feels like giving up on something I can't even name.",
+      "target_emotion": "EXISTENTIAL_FEAR",
+      "length": "long"
+    },
+    {
+      "id": "synthetic-040",
+      "content_raw": "We had sex last night and I felt completely disconnected from my own body. Like I was just going through the motions. He didn't notice. Or maybe he did and didn't care.",
+      "target_emotion": "SADNESS_LONELINESS",
+      "length": "medium"
+    },
+    {
+      "id": "synthetic-041",
+      "content_raw": "She promised shed be home by 8 for our date night. It's 10:45 and she just texted 'running late.' This is so typical I don't even know why I'm surprised anymore.",
+      "target_emotion": "ANGER_HOSTILITY",
+      "length": "medium"
+    },
+    {
+      "id": "synthetic-042",
+      "content_raw": "He fixed my car this weekend. Spent his whole Saturday under the hood, came inside covered in grease, wouldn't let me pay for parts. Said 'that's what partners do.' My heart.",
+      "target_emotion": "GRATITUDE_APPRECIATION",
+      "length": "short"
+    },
+    {
+      "id": "synthetic-043",
+      "content_raw": "Why does she always compare me to her previous boyfriends? 'Well Ryan used to do this' 'Matt was better at that' THEN GO BE WITH RYAN AND MATT.",
+      "target_emotion": "JEALOUSY_INSECURITY",
+      "length": "short"
+    },
+    {
+      "id": "synthetic-044",
+      "content_raw": "My best friend asked me today if I'm happy and I couldn't answer. I just froze. That should have been an easy yes but it wasn't. What does that mean? Am I unhappy or am I just used to this? Is there even a difference anymore?",
+      "target_emotion": "EXISTENTIAL_FEAR",
+      "length": "medium"
+    },
+    {
+      "id": "synthetic-045",
+      "content_raw": "I reached for his hand while we were watching TV and he moved it to grab his phone. Didn't even realize what he'd done. Or maybe he did.",
+      "target_emotion": "SADNESS_LONELINESS",
+      "length": "short"
+    },
+    {
+      "id": "synthetic-046",
+      "content_raw": "I found out she's been complaining about me to her friends. Like actually venting about our private stuff. That's such a violation of trust I can't even look at her right now.",
+      "target_emotion": "ANGER_HOSTILITY",
+      "length": "medium"
+    },
+    {
+      "id": "synthetic-047",
+      "content_raw": "We were walking in the rain and he gave me his jacket even though he was already cold. Such a cliche thing but it made me fall in love with him all over again. It's the small sacrifices that matter most.",
+      "target_emotion": "GRATITUDE_APPRECIATION",
+      "length": "medium"
+    },
+    {
+      "id": "synthetic-048",
+      "content_raw": "I know I shouldn't have looked at his phone but I did and there's nothing there and somehow that makes me feel crazier??? Like what is wrong with me?",
+      "target_emotion": "JEALOUSY_INSECURITY",
+      "length": "short"
+    },
+    {
+      "id": "synthetic-049",
+      "content_raw": "I'm 28 and everyone keeps asking when we're getting engaged. He's 31 and never brings it up. Not once. We've been together three years and he's never even hinted at marriage. Meanwhile his younger brother just proposed to his girlfriend of 18 months. What does that say about us? About me? Am I not 'the one'? Is he just comfortable? I can't tell if I'm being impatient or if my instincts are right and he's never going to propose. Do I wait? Do I bring it up? Do I give an ultimatum? The thought of losing him makes me sick but the thought of wasting more years waiting for something that's never going to happen makes me sicker.",
+      "target_emotion": "EXISTENTIAL_FEAR",
+      "length": "long"
+    },
+    {
+      "id": "synthetic-050",
+      "content_raw": "He said he needed space. What does that even mean? Space from what? From me? I feel like I'm drowning and he just... needs space.",
+      "target_emotion": "SADNESS_LONELINESS",
+      "length": "short"
+    }
+  ]

@@ -1,6 +1,9 @@
 from dataset_loader import load_synthetic_data
 from llm_client import run_nvc_prompt
 from evaluator import evaluate_schema, evaluate_category, evaluate_length
+import csv
+import os
+import pandas as pd
 
 # 1. Define the Prompt Template for the whole run
 PROMPT_TEMPLATE = """
@@ -18,13 +21,34 @@ JSON Structure:
 }
 """
 
-def main():
+def save_results_to_csv(results, filename="results/eval_report_v1.csv"):
+    if not results:
+        return
     
-    # 1. Load the 50 notes
+    df = pd.DataFrame(results)
+
+    df.to_csv(filename, index=False, encoding="utf-8")
+    print(f"Report saved successfully to {filename}")
+
+    # 3. Task 5.3: Print instant aggregate analytics
+    print("\n--- AGGREGATE ANALYTICS ---")
+    total_notes = len(df)
+    success_api = df[df['status'] == 'SUCCESS'].shape[0]
+    
+    print(f"Total Processed: {total_notes}")
+    print(f"API Success Rate: {(success_api / total_notes) * 100:.1f}%")
+    print(f"Schema Passing Rate: {df['is_schema_ok'].mean() * 100:.1f}%")
+    print(f"Category Passing Rate: {df['is_category_ok'].mean() * 100:.1f}%")
+    print(f"Length Passing Rate: {df['is_length_ok'].mean() * 100:.1f}%")
+
+
+def main():
+
+    # 1. Load the notes
     try:
         notes = load_synthetic_data("data/raw_data.json")
     except Exception as e:
-        print(f"❌ Could not load data: {e}")
+        print(f"Could not load data: {e}")
         return
 
     results = []
@@ -68,7 +92,9 @@ def main():
     # 4. Final Summary
     success_count = sum(1 for r in results if r["status"] == "SUCCESS")
     print(f"\n✅ Pipeline Finished!")
-    print(f"📊 Successfully processed {success_count}/{len(notes)} notes.")
+    print(f"Successfully processed {success_count}/{len(notes)} notes.")
+
+    save_results_to_csv(results, "results/eval_report_v1.csv")
     
     return results
 
@@ -76,4 +102,4 @@ if __name__ == "__main__":
     final_results = main()
     # For now, let's just see the first result to verify
     if final_results:
-        print(f"\n👀 Sample Result: {final_results[0]}")
+        print(f"\nSample Result: {final_results[0]}")
