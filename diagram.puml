@@ -1,0 +1,48 @@
+@startuml diagram.puml
+skinparam docvis true
+skinparam style strictuml
+
+package "Data Component" {
+    class DatasetLoader {
+        + load_synthetic_data(filename: str) : list
+    }
+}
+
+package "Core AI Engine (OOP)" {
+    abstract class BaseEvaluator {
+        + api_key: str
+        + model_name: str
+        + template: str
+        + results: list
+        + __init__(api_key, template, model_name)
+        + {abstract} run_nvc_transformation(raw_note: str) : dict
+        + evaluate_all(data_dict: dict) : dict
+        + export_report(filename: str) : void
+    }
+
+    class PromptEvaluator {
+        - client: genai.Client
+        - _clean_json(raw_text: str) : str
+        + run_nvc_transformation(raw_note: str) : dict
+    }
+}
+
+' Relationships
+BaseEvaluator <|-- PromptEvaluator : "Inheritance & Polymorphism"
+DatasetLoader ..> BaseEvaluator : "Provides raw notes to"
+
+note right of BaseEvaluator
+  <b>Encapsulation:</b>
+  Data (results) and logic (evaluation)
+  stay locked together in one container.
+end note
+
+note right of PromptEvaluator
+  <b>Instantiation Example:</b>
+  evaluator = PromptEvaluator(API_KEY, TEMPLATE)
+  
+  <b>Private Method:</b>
+  _clean_json handles formatting internally.
+end note
+
+@endum
