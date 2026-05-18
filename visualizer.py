@@ -1,5 +1,6 @@
 import pandas as pd
 import matplotlib.pyplot as plt
+import os
 
 def generate_performance_chart(csv_path="results/eval_report_v1.csv"):
     # 1. Load the data using Pandas

@@ -4,6 +4,7 @@ from google import genai
 from PromptEvaluator import PromptEvaluator 
 from dataset_loader import load_synthetic_data
 from config import GEMINI_API_KEY
+from visualizer import generate_performance_chart
 
 if __name__ == "__main__":
     print("🚀 Initializing OOP Prompt Evaluation Pipeline...")
@@ -73,5 +74,11 @@ if __name__ == "__main__":
         
         # Save progress sequentially after each entry to prevent data loss
         evaluator.export_report("results/eval_report_v1.csv")
+
+    print("\nLaunching data visualizer...")
+    try:
+        generate_performance_chart("results/eval_report_v1.csv")
+    except Exception as e:
+        print(f"Error generating chart: {e}")
 
     print("\nPipeline complete! Your code is now fully Object-Oriented.")
