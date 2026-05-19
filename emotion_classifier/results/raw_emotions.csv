@@ -1,0 +1,402 @@
+[
+  {
+    "text": "they never take accountability for anything",
+    "label": "ANGER_HOSTILITY"
+  },
+  {
+    "text": "why is it always my job to fix everything",
+    "label": "ANGER_HOSTILITY"
+  },
+  {
+    "text": "they cancel plans with me but never with their friends. starting to see where their priorities really are.",
+    "label": "SADNESS_PAIN"
+  },
+  {
+    "text": "just found out they lied about something important",
+    "label": "COMPLEX_SURPRISE"
+  },
+  {
+    "text": "got lost in conversation for hours without checking my phone once. forgot the rest of the world existed.",
+    "label": "JOY_AFFECTION"
+  },
+  {
+    "text": "they remembered this tiny detail i mentioned weeks ago about my favorite childhood snack. showed up today with it just because they were thinking of me. it's the little things that make me realize how much they actually listen.",
+    "label": "JOY_AFFECTION"
+  },
+  {
+    "text": "they criticized me then got mad when i defended myself. apparently i'm supposed to just sit there and take it. not how this works.",
+    "label": "ANGER_HOSTILITY"
+  },
+  {
+    "text": "terrified they'll realize i'm not actually that interesting",
+    "label": "FEAR_ANXIETY"
+  },
+  {
+    "text": "they want kids within a year and we've never discussed timelines. thought we had more time to figure things out.",
+    "label": "COMPLEX_SURPRISE"
+  },
+  {
+    "text": "they didn't even notice i was upset today. spent the whole evening on the verge of tears and they were just scrolling on their phone like nothing was wrong. makes me wonder if they even care anymore.",
+    "label": "SADNESS_PAIN"
+  },
+  {
+    "text": "finally found someone who doesn't make me feel crazy for caring",
+    "label": "JOY_AFFECTION"
+  },
+  {
+    "text": "sick of being the bad guy when they're the one who messed up",
+    "label": "ANGER_HOSTILITY"
+  },
+  {
+    "text": "they broke another promise like it's nothing",
+    "label": "ANGER_HOSTILITY"
+  },
+  {
+    "text": "they crossed a boundary i clearly set and acted confused. we literally talked about this last week.",
+    "label": "ANGER_HOSTILITY"
+  },
+  {
+    "text": "we've become strangers who share an apartment. pass each other in the hallway with awkward small talk.",
+    "label": "SADNESS_PAIN"
+  },
+  {
+    "text": "they said they'd stop and here we are having the same fight. starting to think they just don't respect me.",
+    "label": "ANGER_HOSTILITY"
+  },
+  {
+    "text": "done being the only one who compromises in this relationship",
+    "label": "ANGER_HOSTILITY"
+  },
+  {
+    "text": "pissed that they shared something private i told them. explicitly said don't tell anyone and they did anyway.",
+    "label": "ANGER_HOSTILITY"
+  },
+  {
+    "text": "we laughed until we cried over the dumbest thing. my stomach hurts but in the best way.",
+    "label": "JOY_AFFECTION"
+  },
+  {
+    "text": "sitting across from them at dinner with nothing to say. the silence is so loud it hurts.",
+    "label": "SADNESS_PAIN"
+  },
+  {
+    "text": "they gaslight me every time i bring up something that bothers me. make me feel crazy for having valid feelings. always turning it around like i'm the problem when i'm just trying to communicate.",
+    "label": "ANGER_HOSTILITY"
+  },
+  {
+    "text": "they admitted they're not attracted to me like they used to be. appreciated the honesty but holy shit that hurt. now i don't know if we can come back from that or if i even want to try.",
+    "label": "COMPLEX_SURPRISE"
+  },
+  {
+    "text": "the distance between us keeps growing no matter what i do. i try to plan things, start conversations, show affection. but it's like talking to a wall and i don't know how much longer i can keep this up.",
+    "label": "SADNESS_PAIN"
+  },
+  {
+    "text": "worried i'm becoming too clingy",
+    "label": "FEAR_ANXIETY"
+  },
+  {
+    "text": "what if i'm reading too much into their recent distance",
+    "label": "FEAR_ANXIETY"
+  },
+  {
+    "text": "we're planning a trip together and it feels so real. looking at flights and hotels like actual adults.",
+    "label": "JOY_AFFECTION"
+  },
+  {
+    "text": "worried about bringing up moving in together and scaring them off. want to know where this is going but terrified of the answer.",
+    "label": "FEAR_ANXIETY"
+  },
+  {
+    "text": "we're together but i feel completely abandoned. they're physically present but emotionally checked out. sitting right next to someone and feeling lonelier than when i was actually single.",
+    "label": "SADNESS_PAIN"
+  },
+  {
+    "text": "just found out they applied to grad school without mentioning it. it's in another state starting next fall.",
+    "label": "COMPLEX_SURPRISE"
+  },
+  {
+    "text": "they made dinner and it was actually good. watching them cook while singing off-key was everything.",
+    "label": "JOY_AFFECTION"
+  },
+  {
+    "text": "noticed they've been on their phone more and my mind won't stop. probably nothing but what if it's not nothing.",
+    "label": "FEAR_ANXIETY"
+  },
+  {
+    "text": "they stood up for me when i couldn't find the words. my coworker was being condescending at the party and they shut it down so smoothly. felt so protected and seen.",
+    "label": "JOY_AFFECTION"
+  },
+  {
+    "text": "scared to tell them what i really need in case they leave",
+    "label": "FEAR_ANXIETY"
+  },
+  {
+    "text": "they promised things would change but here we are. same issues, same disappointment, different day.",
+    "label": "SADNESS_PAIN"
+  },
+  {
+    "text": "they seem stressed and i'm afraid they blame me. don't want to be another problem in their life.",
+    "label": "FEAR_ANXIETY"
+  },
+  {
+    "text": "caught them staring at me with that soft look again. asked what they were thinking and they just said they can't believe i'm real. my heart actually skipped a beat.",
+    "label": "JOY_AFFECTION"
+  },
+  {
+    "text": "caught myself smiling at my phone again because of their text",
+    "label": "JOY_AFFECTION"
+  },
+  {
+    "text": "feeling like an option instead of a priority",
+    "label": "SADNESS_PAIN"
+  },
+  {
+    "text": "miss the person they were when we first started dating. don't even recognize them sometimes now.",
+    "label": "SADNESS_PAIN"
+  },
+  {
+    "text": "so tired of picking up after them like i'm their parent",
+    "label": "ANGER_HOSTILITY"
+  },
+  {
+    "text": "found out they've been in therapy talking about us. didn't know they were struggling that much.",
+    "label": "COMPLEX_SURPRISE"
+  },
+  {
+    "text": "they mentioned their ex casually and now i can't stop comparing myself. wondering if i measure up.",
+    "label": "FEAR_ANXIETY"
+  },
+  {
+    "text": "they met my family and fit right in like they've always been there. my mom already loves them.",
+    "label": "JOY_AFFECTION"
+  },
+  {
+    "text": "they said i love you for the first time during an argument",
+    "label": "COMPLEX_SURPRISE"
+  },
+  {
+    "text": "why am i always apologizing when they should be. mess up, hurt my feelings, cross boundaries, and somehow i end up being the one saying sorry. this dynamic is completely backwards and i'm over it.",
+    "label": "ANGER_HOSTILITY"
+  },
+  {
+    "text": "we stayed up till 3am just talking about everything and nothing. didn't even notice the time pass.",
+    "label": "JOY_AFFECTION"
+  },
+  {
+    "text": "the spark is gone and we both know it",
+    "label": "SADNESS_PAIN"
+  },
+  {
+    "text": "they haven't texted back in hours and i'm spiraling. know they're probably just busy but the anxiety is killing me.",
+    "label": "FEAR_ANXIETY"
+  },
+  {
+    "text": "they wore that cologne i mentioned i liked and noticed when i noticed. smiled at me all smug like they knew exactly what they were doing. damn right it worked.",
+    "label": "JOY_AFFECTION"
+  },
+  {
+    "text": "the way they hold my face when they kiss me goodbye",
+    "label": "JOY_AFFECTION"
+  },
+  {
+    "text": "worried every argument might be the one that ends us. keep waiting for them to decide i'm not worth it.",
+    "label": "FEAR_ANXIETY"
+  },
+  {
+    "text": "they forgot something that mattered to me again",
+    "label": "SADNESS_PAIN"
+  },
+  {
+    "text": "they brought me flowers just because it's tuesday. no special reason, just wanted to make me smile.",
+    "label": "JOY_AFFECTION"
+  },
+  {
+    "text": "they want to take a break to figure things out",
+    "label": "COMPLEX_SURPRISE"
+  },
+  {
+    "text": "we're going through the motions but nothing feels real anymore. like we're both just pretending.",
+    "label": "SADNESS_PAIN"
+  },
+  {
+    "text": "what if i love them more than they love me",
+    "label": "FEAR_ANXIETY"
+  },
+  {
+    "text": "we're pregnant and neither of us planned for this",
+    "label": "COMPLEX_SURPRISE"
+  },
+  {
+    "text": "scared they're going to wake up and see all my flaws. the longer we're together the more ways they'll find me lacking.",
+    "label": "FEAR_ANXIETY"
+  },
+  {
+    "text": "worried i'm more invested than they are. catch myself thinking about our future constantly while they barely mention next month. feels like we're on completely different pages and i'm too scared to check.",
+    "label": "FEAR_ANXIETY"
+  },
+  {
+    "text": "they revealed they've been dealing with something major alone. been struggling for weeks and didn't want to burden me. makes me sad they didn't feel like they could share it. am i not a safe person to them?",
+    "label": "COMPLEX_SURPRISE"
+  },
+  {
+    "text": "discovered they've been talking to their ex as friends for months. not cheating or anything but why didn't they tell me. now i'm wondering what else they haven't mentioned and if i can trust them.",
+    "label": "COMPLEX_SURPRISE"
+  },
+  {
+    "text": "they seem different lately and i can't figure out why. trying not to jump to conclusions but my brain won't shut up.",
+    "label": "FEAR_ANXIETY"
+  },
+  {
+    "text": "they want to move in together next month",
+    "label": "COMPLEX_SURPRISE"
+  },
+  {
+    "text": "found out they turned down their dream job to stay near me. feel grateful but also guilty and confused.",
+    "label": "COMPLEX_SURPRISE"
+  },
+  {
+    "text": "their double standards are getting really old. can do whatever they want but the second i do the same thing it's a problem. the hypocrisy is actually impressive at this point.",
+    "label": "ANGER_HOSTILITY"
+  },
+  {
+    "text": "they admitted they almost broke up with me last month. had a whole plan and everything but changed their mind.",
+    "label": "COMPLEX_SURPRISE"
+  },
+  {
+    "text": "watching them pull away and not knowing how to stop it",
+    "label": "SADNESS_PAIN"
+  },
+  {
+    "text": "they want to open the relationship and i don't know how to process",
+    "label": "COMPLEX_SURPRISE"
+  },
+  {
+    "text": "they used to ask about my day, now they just scroll. sit next to me on the couch but miles away.",
+    "label": "SADNESS_PAIN"
+  },
+  {
+    "text": "the way they look at me across the room makes my heart race",
+    "label": "JOY_AFFECTION"
+  },
+  {
+    "text": "what if this is as good as it gets for us",
+    "label": "FEAR_ANXIETY"
+  },
+  {
+    "text": "they don't look at me the same way anymore",
+    "label": "SADNESS_PAIN"
+  },
+  {
+    "text": "what if they realize they made a mistake choosing me. there are so many people out there who are smarter, funnier, more successful. why would they stay when they could do better.",
+    "label": "FEAR_ANXIETY"
+  },
+  {
+    "text": "realizing i've been making excuses for them to everyone. my friends keep asking if we're okay and i keep lying. getting tired of defending someone who wouldn't do the same for me.",
+    "label": "SADNESS_PAIN"
+  },
+  {
+    "text": "dancing in the living room to our song at midnight. barefoot and laughing at how bad we both are at dancing.",
+    "label": "JOY_AFFECTION"
+  },
+  {
+    "text": "can't believe they had the audacity to blame me for their mistake. won't even consider that they might be wrong.",
+    "label": "ANGER_HOSTILITY"
+  },
+  {
+    "text": "turns out they've been feeling the exact same doubts as me",
+    "label": "COMPLEX_SURPRISE"
+  },
+  {
+    "text": "why do i have to remind them about basic respect",
+    "label": "ANGER_HOSTILITY"
+  },
+  {
+    "text": "they stopped saying i love you first. now i'm always the one saying it and getting back a half-hearted 'love you too'. feels more like an obligation than a feeling at this point.",
+    "label": "SADNESS_PAIN"
+  },
+  {
+    "text": "turns out they've been unhappy way longer than they let on. feel blindsided and stupid for not noticing.",
+    "label": "COMPLEX_SURPRISE"
+  },
+  {
+    "text": "can't stand their victim mentality when they caused the problem",
+    "label": "ANGER_HOSTILITY"
+  },
+  {
+    "text": "they stopped trying and i'm exhausted from trying for both of us. can't keep this going alone.",
+    "label": "SADNESS_PAIN"
+  },
+  {
+    "text": "they were quieter than usual today and i'm overthinking everything. analyzing every word, every look, every silence.",
+    "label": "FEAR_ANXIETY"
+  },
+  {
+    "text": "they suggested couple's therapy completely out of nowhere. didn't realize things were that serious.",
+    "label": "COMPLEX_SURPRISE"
+  },
+  {
+    "text": "waking up next to them never gets old",
+    "label": "JOY_AFFECTION"
+  },
+  {
+    "text": "what if we're only working because we haven't faced real problems yet. things are good now but what happens when life gets hard. will they actually stick around or bail when it matters most.",
+    "label": "FEAR_ANXIETY"
+  },
+  {
+    "text": "can't remember the last time we had a real conversation",
+    "label": "SADNESS_PAIN"
+  },
+  {
+    "text": "what if they're settling for me",
+    "label": "FEAR_ANXIETY"
+  },
+  {
+    "text": "they prioritize literally everyone else over me. will drop everything for their friends but when i need something it's always 'can we do this later'. well guess what, later never comes and i'm sick of it.",
+    "label": "ANGER_HOSTILITY"
+  },
+  {
+    "text": "they proposed at a completely random moment and i wasn't ready",
+    "label": "COMPLEX_SURPRISE"
+  },
+  {
+    "text": "their selective memory is really convenient isn't it. remember everything i did wrong but nothing they promised.",
+    "label": "ANGER_HOSTILITY"
+  },
+  {
+    "text": "they talked over me the entire dinner. didn't let me finish a single sentence in front of their friends.",
+    "label": "ANGER_HOSTILITY"
+  },
+  {
+    "text": "we finished each other's sentences three times today. it's getting kinda ridiculous but i love it.",
+    "label": "JOY_AFFECTION"
+  },
+  {
+    "text": "scared we want different futures",
+    "label": "FEAR_ANXIETY"
+  },
+  {
+    "text": "they dismissed my feelings AGAIN and i'm done explaining. act like i'm overreacting every single time.",
+    "label": "ANGER_HOSTILITY"
+  },
+  {
+    "text": "turns out they already told their family we're getting married. we've talked about it vaguely but nothing concrete. now there's all this pressure and expectation i didn't sign up for yet.",
+    "label": "COMPLEX_SURPRISE"
+  },
+  {
+    "text": "they're right here but i miss them",
+    "label": "SADNESS_PAIN"
+  },
+  {
+    "text": "they said they need space but won't say why",
+    "label": "COMPLEX_SURPRISE"
+  },
+  {
+    "text": "feeling grateful they chose me back",
+    "label": "JOY_AFFECTION"
+  },
+  {
+    "text": "they grabbed my hand in public without hesitation",
+    "label": "JOY_AFFECTION"
+  }
+]

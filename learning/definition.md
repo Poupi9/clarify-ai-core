@@ -192,4 +192,18 @@ print(df.head())  # Shows the first 5 rows of your spreadsheet!
 In summary:  
 > Use a Pandas DataFrame when you want to analyze data with Python as easily as you would with Excel, but with way more power, flexibility, and speed!
 
-## 
+---
+
+## how save in CSV format (Le plus "Data Science") 
+L'outil : csv.DictWriter
+C'est un traducteur : il prend un dictionnaire {key: value} et sait que key est le nom de la colonne et value le contenu de la cellule.
+
+La logique à suivre :
+
+Définir les colonnes : colonnes = ["original", "mood_category", "nvc"].
+
+Créer l'écrivain : writer = csv.DictWriter(f, fieldnames=colonnes).
+
+Écrire l'en-tête (les noms des colonnes) : writer.writeheader().
+
+Écrire les données : writer.writerows(all_results).

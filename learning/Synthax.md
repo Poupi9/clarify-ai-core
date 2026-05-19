@@ -22,3 +22,22 @@
 *   **`csv.DictWriter` + `writeheader()` + `writerows()`** : Used to export a list of dictionaries to a spreadsheet-friendly CSV. Each dict key becomes a column; each dict becomes one row.
 *   **`open(..., newline="", encoding="utf-8")`** : Used when writing CSV files. `newline=""` avoids extra blank lines on some systems; `encoding="utf-8"` preserves accents and emoji in your data.
 *   **`sum(1 for r in results if r["status"] == "SUCCESS")`** : Used as a compact one-liner to count how many items in a list match a condition (here: how many notes succeeded).
+* client.models.generate_content ?
+Imagine que tu es dans un restaurant (le SDK Google) :
+
+client : C'est le serveur qui prend ta commande.
+
+.models : C'est le menu. Tu dis au serveur que tu veux regarder les plats (les modèles).
+
+.generate_content : C'est l'action de commander. Tu demandes à la cuisine de "générer" ton plat.
+
+* What it is: A bridge between your .env file and your script.
+
+Why we use it: Python doesn't "see" the .env file by default. load_dotenv() searches your folder for a file named .env and loads the variables (like your API key) into the system's memory (os.environ).
+
+Why os.getenv? Instead of writing API_KEY = "AIza..." in your code (which is dangerous if you share your code), you use os.getenv("KEY_NAME"). It's like calling a secret name from a vault.
+
+*    for i in range(total_target // batch_size):
+500 // 50 equals 10. It’s not a comma; it’s just division that "throws away" the decimal part.
+
+* 
