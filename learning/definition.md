@@ -207,3 +207,111 @@ Créer l'écrivain : writer = csv.DictWriter(f, fieldnames=colonnes).
 Écrire l'en-tête (les noms des colonnes) : writer.writeheader().
 
 Écrire les données : writer.writerows(all_results).
+
+
+## What the hell is Hugging Face?
+The short answer: Hugging Face is the "GitHub of Machine Learning."
+
+Deep Dive: Five years ago, if you wanted to use a state-of-the-art AI model created by Google or Facebook, you had to read a 30-page academic math paper, download massive files manually, and write hundreds of lines of complex PyTorch code just to get the model to turn on. It was reserved for PhDs.
+
+Hugging Face changed the world by building the transformers library. They took all those complex models and standardized them. Now, anyone can download and use Google's or Meta's billion-dollar AI models with just two lines of code (.from_pretrained()). They single-handedly democratized AI.
+
+The "Hugging Face Format" (datasets library):
+Pandas DataFrames are great for small files (like your 100 rows). But in deep learning, we often train on millions of rows. Pandas would crash your computer's RAM. Hugging Face built the datasets library using a technology called Apache Arrow, which allows your computer to read massive files off the hard drive instantly without crashing your memory.
+
+
+## What is Apache Arrow?
+
+Apache Arrow is a high-performance framework for working with large, columnar data in-memory. It provides a standardized language-independent format that allows for fast data exchange between different tools and programming languages (like Python, R, and Java) without needing to copy or convert data.
+
+**Specificity of Apache Arrow:**
+- **Columnar Storage:** Unlike traditional row-based formats, Arrow stores data by columns, making analytics and filtering operations dramatically faster—especially for big datasets.
+- **Zero-Copy Reads:** Data doesn’t need to be serialized or deserialized when passed between systems supporting Arrow, which saves memory and time.
+- **Designed for Big Data & ML:** Arrow can easily handle datasets that are much larger than your computer’s RAM by using memory mapping. It’s the backbone of many modern data science tools (like Hugging Face Datasets library and Pandas integration with Parquet).
+- **Interoperability:** It’s the universal “language” that powerful data science systems use to talk to each other without bottlenecks.
+
+In summary: Apache Arrow is what makes it possible to process massive datasets extremely quickly and efficiently, powering next-level machine learning and data science workflows.
+
+## DistilBERT vs. Scikit-Learn
+Scikit-Learn (Traditional ML) is like a very fast accountant counting words.
+
+It uses "Bag of Words." It looks at a sentence and says: "I see the word 'happy' 1 time, and the word 'not' 1 time."
+
+The flaw: It doesn't understand order. To Scikit-Learn, "I am happy, not sad" and "I am sad, not happy" look exactly the same mathematically.
+
+DistilBERT (Deep Learning) is like a human reader.
+
+It uses an architecture called "Attention."
+
+It doesn't just count words; it looks at every word and calculates how it relates to every other word in the sentence. It inherently understands context, sarcasm, and the difference between "I killed it out there!" (Joy) and "I killed him" (Anger).
+
+
+## X_train, X_test, y_train, y_test
+🧒 The Metaphor:
+Imagine you are a teacher preparing a student for a final exam.
+
+X are the Questions (the flashcards with sentences).
+
+y are the Answers (the emotion number on the back of the flashcard).
+
+train is the Study Deck (80% of the cards). You let the student look at both the front (X) and the back (y) so they can learn.
+
+test is the Final Exam (20% of the cards). You only show them the front (X_test), they guess the answer, and you secretly check your answer key (y_test) to grade them.
+
+🎓 The Engineering Theory:
+In Data Science, this is standard mathematical notation based on linear algebra:
+
+Capital X represents a 2D Matrix of Features (Inputs). It is capitalized because in math, a matrix is represented by a capital letter.
+
+Lowercase y represents a 1D Vector of Labels / Targets (Outputs).
+
+We strictly separate our dataset into "Train" and "Test" to prevent Overfitting. If a neural network trains on the entire dataset, it will just memorize the answers. By hiding the X_test and y_test during training, we can calculate the model's true ability to generalize to new, unseen data.
+
+
+## If DistilBERT is already trained to detect human emotion, why am I training my own AI model?
+🧠 The Paradox of Pre-Trained Models
+🧒 The Metaphor:
+Imagine DistilBERT is a genius teenager who just read every book in the library. He understands sarcasm, he understands context, and he knows exactly what a joke is. BUT, he has never played your specific custom board game.
+
+You don't need to teach him how to read or how humans act (he already knows that). You just need to show him a few flashcards to say: "In my game, we put sarcastic sentences into bucket number 2, and sad sentences into bucket number 1." Because he is a genius, he only needs to see 100 flashcards to master your game, instead of the 10,000 flashcards a toddler would need.
+🎓 The Engineering Theory:
+What you are doing is called Transfer Learning (specifically, Fine-Tuning).
+
+Phase A: Pre-training (What Google did): DistilBERT spent weeks reading Wikipedia on a supercomputer. It built a deep, mathematical understanding of the English language.
+
+Phase B: Fine-Tuning (What you are doing): When you typed num_labels=5, Hugging Face literally chopped off the top layer of DistilBERT's brain (the part that predicts the next word) and glued on a brand-new, completely blank layer with 5 outputs.
+
+During your training phase, DistilBERT isn't learning English. It is only training that brand-new top layer to map its deep understanding of English into your 5 specific categories. This is why you can train a world-class AI on your Mac in 5 minutes with only 500 rows of data, instead of needing a million rows and a data center!
+
+
+## How does the model calculate "Logits"?
+The AI Math: A Neural Network is basically a giant game of Plinko (or a pachinko machine) made of math.The words go in at the top as numbers.They fall through millions of hidden "weights" (multipliers). At each step, the model does matrix multiplication: $Y = W \cdot X + b$ (Weight $\times$ Input + Bias).At the very bottom of the machine, there are 5 buckets (your 5 emotions).The final raw numbers that land in those 5 buckets are called Logits. For example, the model might output [ -2.5, 8.4, 0.1, -1.1, 3.2 ].np.argmax simply looks at that list and says: "8.4 is the biggest number. It is at index 1. So the answer is category 1 (SADNESS_PAIN)."
+
+---
+
+## The Math Behind Accuracy and F1-Score
+
+These are not native to Python; they come from the scikit-learn library, which contains the standard mathematical formulas for grading algorithms.
+
+## Accuracy: This is simple division.
+Accuracy = Total Number of Guesses \ Number of Correct Guesses
+
+If it guesses 80 right out of 100, accuracy is 80%. But as I mentioned before, if your data is unbalanced, Accuracy is a liar. That is why we use F1.
+
+## F1-Score: This is a much harsher grading system. 
+
+It combines two different concepts:Precision: When the AI guesses "ANGER", how often is it actually right? $\frac{\text{True Positives}}{\text{True Positives} + \text{False Positives}}$Recall: Out of all the real "ANGER" sentences in the dataset, how many did the AI successfully find? $\frac{\text{True Positives}}{\text{True Positives} + \text{False Negatives}}$The F1-Score is the "Harmonic Mean" of Precision and Recall. It punishes the AI heavily if it just blindly guesses the same emotion every time.$$F1 = 2 \times \frac{\text{Precision} \times \text{Recall}}{\text{Precision} + \text{Recall}}$$
+
+
+----
+
+## What is an Epoch? (Why read flashcards 3 times?)
+An Epoch means exactly "One full pass through the entire training dataset."
+
+Why not 1 time? If you study flashcards only once, you will forget them. The AI's math equations adjust tiny amounts at a time (this is called Gradient Descent). One pass isn't enough to fix the math.
+
+Why not 100 times? If you read the same 80 flashcards 100 times, you stop learning concepts and just memorize the exact sentences (this is called Overfitting). The AI would get 100% on the study cards, but fail miserably in the real world.
+
+Why 3? For "Fine-Tuning" massive models like DistilBERT, 3 to 5 epochs is the industry standard sweet spot.
+
+

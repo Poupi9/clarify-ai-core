@@ -6,3 +6,7 @@ venv/
 
 # Fichiers caches Python
 __pycache__/
+
+*.pt
+*.safetensors
+checkpoint-*/

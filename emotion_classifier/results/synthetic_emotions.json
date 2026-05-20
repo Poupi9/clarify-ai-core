@@ -1,0 +1,402 @@
+[
+  {
+    "text": "that laugh of theirs just melts me every time.",
+    "label": "JOY_AFFECTION"
+  },
+  {
+    "text": "woke up next to him and everything felt so right.",
+    "label": "JOY_AFFECTION"
+  },
+  {
+    "text": "just thinking about her makes me smile like an idiot.",
+    "label": "JOY_AFFECTION"
+  },
+  {
+    "text": "we talked for hours last night, it was perfect.",
+    "label": "JOY_AFFECTION"
+  },
+  {
+    "text": "he brought me my favorite coffee this morning.",
+    "label": "JOY_AFFECTION"
+  },
+  {
+    "text": "couldn't ask for a better day with them.",
+    "label": "JOY_AFFECTION"
+  },
+  {
+    "text": "she's seriously the best person i know.",
+    "label": "JOY_AFFECTION"
+  },
+  {
+    "text": "we just get each other, it's so easy.",
+    "label": "JOY_AFFECTION"
+  },
+  {
+    "text": "he squeezed my hand under the table, totally out of nowhere. it was such a small thing but my heart just fluttered.",
+    "label": "JOY_AFFECTION"
+  },
+  {
+    "text": "she remembered that tiny detail i told her weeks ago. it just shows how much she really listens, makes me feel so seen.",
+    "label": "JOY_AFFECTION"
+  },
+  {
+    "text": "she sent me a picture of her cat curled up on my side of the bed. my favorite little weirdo and her furry accomplice.",
+    "label": "JOY_AFFECTION"
+  },
+  {
+    "text": "we spent all afternoon just chilling on the couch, not even talking much. sometimes those quiet moments are the best.",
+    "label": "JOY_AFFECTION"
+  },
+  {
+    "text": "got home and he'd cleaned the whole apartment and made dinner. seriously, how did i get so lucky with this guy?",
+    "label": "JOY_AFFECTION"
+  },
+  {
+    "text": "she told me i looked beautiful today when i felt kinda blah. her words always manage to hit just right and pick me up.",
+    "label": "JOY_AFFECTION"
+  },
+  {
+    "text": "he's so good at making me laugh even when i'm in a terrible mood. it's like his superpower or something.",
+    "label": "JOY_AFFECTION"
+  },
+  {
+    "text": "watching him get so passionate about his work is just so attractive. i love seeing that drive in him.",
+    "label": "JOY_AFFECTION"
+  },
+  {
+    "text": "we had that deep talk i've been wanting to have for ages, and they were so understanding and supportive. it just confirms that i'm with the right person, they truly get me on a level nobody else does. makes me feel so safe and loved.",
+    "label": "JOY_AFFECTION"
+  },
+  {
+    "text": "surprised her with tickets to that concert she's been dying to go to. the look on her face when she realized was priceless, like pure, unadulterated joy. moments like that make everything worth it.",
+    "label": "JOY_AFFECTION"
+  },
+  {
+    "text": "he cooked my favorite meal tonight and we just sat there talking about everything and nothing. it's those simple evenings, just us two, that really make me appreciate him. i feel so incredibly content and cherished.",
+    "label": "JOY_AFFECTION"
+  },
+  {
+    "text": "sometimes i just look at them across the room and my heart kinda swells. it's not just physical attraction, it's this deep connection. i honestly can't imagine my life without their warmth and kindness anymore.",
+    "label": "JOY_AFFECTION"
+  },
+  {
+    "text": "he just doesn't seem to care anymore.",
+    "label": "SADNESS_PAIN"
+  },
+  {
+    "text": "my heart just aches when i think about it.",
+    "label": "SADNESS_PAIN"
+  },
+  {
+    "text": "she's pulling away and i don't know why.",
+    "label": "SADNESS_PAIN"
+  },
+  {
+    "text": "feeling so alone even when they're right here.",
+    "label": "SADNESS_PAIN"
+  },
+  {
+    "text": "another argument about the same damn thing.",
+    "label": "SADNESS_PAIN"
+  },
+  {
+    "text": "it feels like i'm constantly disappointing her.",
+    "label": "SADNESS_PAIN"
+  },
+  {
+    "text": "why am i always the one trying to make things work.",
+    "label": "SADNESS_PAIN"
+  },
+  {
+    "text": "i just wish things could go back to how they were.",
+    "label": "SADNESS_PAIN"
+  },
+  {
+    "text": "he forgot our anniversary again, even after i mentioned it last week. it's not just the date, it's feeling like i'm not a priority to him.",
+    "label": "SADNESS_PAIN"
+  },
+  {
+    "text": "she said she needed space, but it's been days now. my mind just keeps going to the worst-case scenarios, and i just miss her so much.",
+    "label": "SADNESS_PAIN"
+  },
+  {
+    "text": "she cried after our fight and i felt like such a monster. i never want to hurt her, but sometimes i just can't control my words.",
+    "label": "SADNESS_PAIN"
+  },
+  {
+    "text": "i saw an old photo of us today and just got hit with a wave of sadness. things used to be so easy and happy back then.",
+    "label": "SADNESS_PAIN"
+  },
+  {
+    "text": "he's been so distant lately, always on his phone, not really listening. it makes me wonder if he even wants to be here anymore.",
+    "label": "SADNESS_PAIN"
+  },
+  {
+    "text": "another date night canceled because she's \"too tired.\" it's starting to feel like an excuse to avoid spending time with me.",
+    "label": "SADNESS_PAIN"
+  },
+  {
+    "text": "i feel so exhausted from trying to keep us afloat. it's like i'm the only one putting in any effort anymore.",
+    "label": "SADNESS_PAIN"
+  },
+  {
+    "text": "his words during our last argument really cut deep. i keep replaying them in my head and it just stings.",
+    "label": "SADNESS_PAIN"
+  },
+  {
+    "text": "they told me they don't see a future with me right now, and it just shattered everything. i thought we were building something special, and now i just feel completely lost and heartbroken. my world just feels grey.",
+    "label": "SADNESS_PAIN"
+  },
+  {
+    "text": "she's always making me feel like my feelings are an overreaction or too much. it makes me just want to shut down and stop sharing anything, which creates even more distance between us. it's a constant, painful cycle.",
+    "label": "SADNESS_PAIN"
+  },
+  {
+    "text": "i found old messages between him and his ex and it just brought back all those insecurities. i thought we were past this, but clearly, i'm still not enough for him. feeling totally gutted and betrayed.",
+    "label": "SADNESS_PAIN"
+  },
+  {
+    "text": "we used to talk about everything, but now there's this heavy silence between us most of the time. it feels like we're strangers sharing a space, and the thought of us drifting apart completely just makes me want to cry.",
+    "label": "SADNESS_PAIN"
+  },
+  {
+    "text": "they never take accountability for anything.",
+    "label": "ANGER_HOSTILITY"
+  },
+  {
+    "text": "why is it always my job to fix everything.",
+    "label": "ANGER_HOSTILITY"
+  },
+  {
+    "text": "she's so infuriatingly passive-aggressive.",
+    "label": "ANGER_HOSTILITY"
+  },
+  {
+    "text": "i can't stand their condescending tone.",
+    "label": "ANGER_HOSTILITY"
+  },
+  {
+    "text": "he's such a damn hypocrite.",
+    "label": "ANGER_HOSTILITY"
+  },
+  {
+    "text": "i'm so sick of her excuses.",
+    "label": "ANGER_HOSTILITY"
+  },
+  {
+    "text": "they promised they'd change but it's all lies.",
+    "label": "ANGER_HOSTILITY"
+  },
+  {
+    "text": "that just makes my blood boil.",
+    "label": "ANGER_HOSTILITY"
+  },
+  {
+    "text": "she just walked away mid-conversation like i wasn't even talking. so incredibly disrespectful, i'm about to lose my mind.",
+    "label": "ANGER_HOSTILITY"
+  },
+  {
+    "text": "she's constantly bringing up past mistakes, weaponizing my vulnerabilities. it feels like i can never move on with her.",
+    "label": "ANGER_HOSTILITY"
+  },
+  {
+    "text": "she always acts like her problems are bigger than mine. it's so dismissive and frankly, completely self-centered.",
+    "label": "ANGER_HOSTILITY"
+  },
+  {
+    "text": "i told them not to do that one thing and they did it anyway. it's a slap in the face to my boundaries and trust.",
+    "label": "ANGER_HOSTILITY"
+  },
+  {
+    "text": "he keeps making decisions without consulting me, like i'm not even his partner. i'm so tired of feeling like an afterthought.",
+    "label": "ANGER_HOSTILITY"
+  },
+  {
+    "text": "she completely dismissed my feelings during our last fight. i was trying to be vulnerable and she just shut me down cold.",
+    "label": "ANGER_HOSTILITY"
+  },
+  {
+    "text": "they're always late, always making me wait. it's a pattern now and it shows such a lack of respect for my time.",
+    "label": "ANGER_HOSTILITY"
+  },
+  {
+    "text": "i caught him flirting with someone else at the bar. i thought we were past this kind of shit.",
+    "label": "ANGER_HOSTILITY"
+  },
+  {
+    "text": "they always turn everything around to make it my fault, no matter what. it's emotional manipulation and i'm absolutely done with it. i can't keep living like i'm constantly wrong when i know i'm not.",
+    "label": "ANGER_HOSTILITY"
+  },
+  {
+    "text": "she keeps inviting her ex to things even though she knows it makes me uncomfortable. it's a blatant disregard for my feelings and a total disrespect of our relationship. i'm so over her inability to prioritize me.",
+    "label": "ANGER_HOSTILITY"
+  },
+  {
+    "text": "he never helps with anything around the house unless i nag him fifty times, and even then he acts like he's doing me a favor. i'm not his mother, i'm his partner, and this unequal distribution of labor is pissing me off.",
+    "label": "ANGER_HOSTILITY"
+  },
+  {
+    "text": "they constantly interrupt me when i'm trying to explain something, then act like i'm the one being irrational. it's like they're deliberately trying to invalidate my perspective and it makes me want to scream.",
+    "label": "ANGER_HOSTILITY"
+  },
+  {
+    "text": "he hasn't texted back in hours.",
+    "label": "FEAR_ANXIETY"
+  },
+  {
+    "text": "what if they're mad at me.",
+    "label": "FEAR_ANXIETY"
+  },
+  {
+    "text": "i'm scared she's gonna leave.",
+    "label": "FEAR_ANXIETY"
+  },
+  {
+    "text": "what if this isn't gonna work out.",
+    "label": "FEAR_ANXIETY"
+  },
+  {
+    "text": "my stomach is in knots about seeing him.",
+    "label": "FEAR_ANXIETY"
+  },
+  {
+    "text": "i hope i didn't say the wrong thing to her.",
+    "label": "FEAR_ANXIETY"
+  },
+  {
+    "text": "feeling really uneasy about their silence.",
+    "label": "FEAR_ANXIETY"
+  },
+  {
+    "text": "i just have a bad feeling about tonight.",
+    "label": "FEAR_ANXIETY"
+  },
+  {
+    "text": "he's been acting really distant lately, like he's got something on his mind. i keep trying to ask but he just says \"nothing,\" and it's making me really worried.",
+    "label": "FEAR_ANXIETY"
+  },
+  {
+    "text": "she hasn't updated her status in a while and i'm thinking the worst. my brain immediately jumps to accidents or something terrible happening.",
+    "label": "FEAR_ANXIETY"
+  },
+  {
+    "text": "she got really quiet when i brought up moving in together. now i'm spiraling, wondering if i pushed too hard and scared her off.",
+    "label": "FEAR_ANXIETY"
+  },
+  {
+    "text": "i saw them talking really intensely with someone new at the party. now i can't stop replaying it, wondering if there's something more going on.",
+    "label": "FEAR_ANXIETY"
+  },
+  {
+    "text": "my phone rang from him at 3 am and i nearly had a heart attack. turns out it was a butt dial, but i still can't calm down.",
+    "label": "FEAR_ANXIETY"
+  },
+  {
+    "text": "i have this nagging feeling that she's hiding something from me. just little things, but they're adding up and making me paranoid.",
+    "label": "FEAR_ANXIETY"
+  },
+  {
+    "text": "what if i'm not good enough for them in the long run? i keep overthinking every little mistake i make, fearing it'll push them away.",
+    "label": "FEAR_ANXIETY"
+  },
+  {
+    "text": "he said he'd call me back ages ago and still nothing. i'm just sitting here staring at my phone, completely stressed out.",
+    "label": "FEAR_ANXIETY"
+  },
+  {
+    "text": "they've been spending so much time with their new friends lately, and i feel completely left out. i'm scared i'm losing my place in their life, that these new connections will replace what we have. it's a horrible, gnawing feeling of being replaced.",
+    "label": "FEAR_ANXIETY"
+  },
+  {
+    "text": "i keep having these intrusive thoughts about her cheating on me, even though there's no real reason. it's like my brain is actively trying to sabotage my peace, and i hate feeling this constant low-grade terror. i just want to trust completely.",
+    "label": "FEAR_ANXIETY"
+  },
+  {
+    "text": "he brought up our future and said he's not sure what he wants anymore. now my stomach is in knots, terrified that everything we've built is about to crumble. i can't stop thinking about being alone again.",
+    "label": "FEAR_ANXIETY"
+  },
+  {
+    "text": "i'm so scared to be vulnerable with them about my past, because what if they judge me or can't handle it? the thought of opening up and then being rejected or misunderstood makes me want to just keep everything hidden, even though i know it's not healthy.",
+    "label": "FEAR_ANXIETY"
+  },
+  {
+    "text": "they just told me they got a promotion, wow!",
+    "label": "COMPLEX_SURPRISE"
+  },
+  {
+    "text": "he wants to take me on a spontaneous trip.",
+    "label": "COMPLEX_SURPRISE"
+  },
+  {
+    "text": "she's pregnant, holy cow, can you believe it?",
+    "label": "COMPLEX_SURPRISE"
+  },
+  {
+    "text": "they just confessed something huge out of nowhere.",
+    "label": "COMPLEX_SURPRISE"
+  },
+  {
+    "text": "he proposed tonight! totally unexpected.",
+    "label": "COMPLEX_SURPRISE"
+  },
+  {
+    "text": "she completely changed her mind about us.",
+    "label": "COMPLEX_SURPRISE"
+  },
+  {
+    "text": "they remembered that obscure anniversary date.",
+    "label": "COMPLEX_SURPRISE"
+  },
+  {
+    "text": "he just showed up at my door with flowers.",
+    "label": "COMPLEX_SURPRISE"
+  },
+  {
+    "text": "she just told me she's been secretly saving up for our dream vacation. i'm absolutely blown away, what an amazing surprise!",
+    "label": "COMPLEX_SURPRISE"
+  },
+  {
+    "text": "she randomly booked us a couples massage for next weekend. i had no idea she was even thinking about something like that, it's so thoughtful.",
+    "label": "COMPLEX_SURPRISE"
+  },
+  {
+    "text": "he actually listened to my throwaway comment about wanting a new gadget. then he went out and bought it for me, completely out of the blue.",
+    "label": "COMPLEX_SURPRISE"
+  },
+  {
+    "text": "i just found out they've been planning a huge birthday party for me. all this time i thought they forgot, what a shock!",
+    "label": "COMPLEX_SURPRISE"
+  },
+  {
+    "text": "she got a job offer in a completely different city. i'm kinda reeling, i didn't see that coming at all.",
+    "label": "COMPLEX_SURPRISE"
+  },
+  {
+    "text": "he just admitted he's been having doubts about us for months. i'm speechless, i thought we were perfectly fine.",
+    "label": "COMPLEX_SURPRISE"
+  },
+  {
+    "text": "they introduced me to their entire family tonight, just like that. i wasn't prepared for that at all, it was a big step!",
+    "label": "COMPLEX_SURPRISE"
+  },
+  {
+    "text": "i opened the fridge and she'd filled it with all my favorite snacks. it's such a sweet, unexpected gesture after a tough day.",
+    "label": "COMPLEX_SURPRISE"
+  },
+  {
+    "text": "they just inherited a huge sum of money, completely out of the blue, from a distant relative we barely knew. i'm still trying to process it all, it's such a massive and unexpected change to our financial future. my head is spinning.",
+    "label": "COMPLEX_SURPRISE"
+  },
+  {
+    "text": "he told me he wants to move across the country next month for a new opportunity, and he wants me to come with him. it's so sudden and a massive decision, i'm completely taken aback and don't even know what to think right now.",
+    "label": "COMPLEX_SURPRISE"
+  },
+  {
+    "text": "she actually reached out to my estranged sister to try and mend things between us. i had absolutely no idea she was doing that, and i'm floored by her initiative and the sheer kindness of it. it's truly overwhelming in the best way.",
+    "label": "COMPLEX_SURPRISE"
+  },
+  {
+    "text": "i just found out they've been secretly taking classes to learn a new skill i've always wanted us to try together. it's such an incredible and thoughtful surprise, i'm so touched by their dedication and enthusiasm. i really didn't expect that at all.",
+    "label": "COMPLEX_SURPRISE"
+  }
+]

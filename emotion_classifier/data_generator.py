@@ -1,4 +1,4 @@
-import os, json, time
+import os, json, time, csv
 from google import genai
 from dotenv import load_dotenv
 
@@ -86,10 +86,12 @@ def main():
         all_data.extend(batch)
         time.sleep(2) # Avoid rate limiting
 
-    # Save to JSON
-    output_path = "emotion_classifier/results/synthetic_emotions.json"
-    with open(output_path, "w", encoding="utf-8") as f:
-        json.dump(all_data, f, ensure_ascii=False, indent=2)
+    # Save to CSV
+    output_path = "emotion_classifier/results/synthetic_emotions.csv"
+    with open(output_path, "w", newline="", encoding="utf-8") as f:
+        writer = csv.DictWriter(f, fieldnames=["text", "label"])
+        writer.writeheader()
+        writer.writerows(all_data)
 
     print(f"Success! {len(all_data)} entries saved to {output_path}")
 

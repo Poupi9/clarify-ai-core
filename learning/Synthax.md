@@ -40,4 +40,38 @@ Why os.getenv? Instead of writing API_KEY = "AIza..." in your code (which is dan
 *    for i in range(total_target // batch_size):
 500 // 50 equals 10. It’s not a comma; it’s just division that "throws away" the decimal part.
 
-* 
+* text = re.sub(r'[^\w\s]', '', text)This line is a "search and replace" command. Here is exactly what the code is doing, piece by piece:
+
+re.sub(...): This stands for "Substitute." It looks for a pattern and replaces it with something else.
+
+'': This is your replacement. Because it is completely empty, it acts as a delete button. Any pattern it finds will be erased.
+
+r'...': The r stands for "raw string," which tells Python to read the text exactly as written without escaping characters.
+
+[...]: The square brackets define a "group" of characters to look for.
+
+^: Inside the brackets, the caret symbol means NOT.
+
+\w: This represents all "word" characters (letters a-z, numbers 0-9, and underscores).
+
+\s: This represents all "space" characters (spaces, tabs, newlines).
+
+* X_train, X_test, y_train, y_test
+* 3. DistilBertTokenizerFast.from_pretrained("distilbert-base-uncased")from_pretrained means we didn't write this 30,000-word dictionary ourselves; we downloaded Google's official dictionary.
+
+uncased means the dictionary treats "Apple" and "apple" exactly the same to save space.
+base refers to the architecture size (6 transformer layers, 768 hidden dimensions).
+
+* texts.tolist(): Pandas DataFrames are heavy. .tolist() strips away all the heavy Pandas formatting and turns the data into a raw, lightweight Python List.
+
+* Dataset: This is the core class you imported from the Hugging Face datasets library.
+
+* .from_dict(): This is a "Class Method." It tells the Hugging Face Dataset class exactly how to ingest your Python dictionary and convert it into their proprietary Apache Arrow format, which stores data in memory highly efficiently.
+
+* logits, labels = eval_pred (How can two equal one?)
+The Python Mechanic: This is called Tuple Unpacking.
+eval_pred is not a single number; it is a "Tuple" (a locked box) that contains exactly two arrays inside it. Python allows you to open the box and assign the first item to logits and the second item to labels in a single line of code. It is exactly the same as writing:
+
+logits = eval_pred[0]
+
+labels = eval_pred[1]
