@@ -315,3 +315,28 @@ Why not 100 times? If you read the same 80 flashcards 100 times, you stop learni
 Why 3? For "Fine-Tuning" massive models like DistilBERT, 3 to 5 epochs is the industry standard sweet spot.
 
 
+---
+
+📚 Lesson: What is an API Deployment?
+🧒 The Metaphor (The Drive-Thru Window):
+Imagine your DistilBERT model is a world-class chef working in a locked, windowless kitchen. Right now, to get a meal, you have to break down the door, walk into the kitchen, hand the chef a recipe, wait for them to cook, and carry the food out yourself.
+FastAPI is the Drive-Thru Window. You build a window, put a microphone outside, and hire a cashier. Now, anyone in the world can drive up, say "I am feeling sad" into the microphone, and the cashier hands them a bag that says SADNESS_PAIN.
+
+🎓 The Engineering Theory (REST APIs & Inference):
+
+Inference: In Phase 3, we focused on Training (calculating the math to learn). In Phase 4, we focus on Inference (locking the math in place and just asking the model to make predictions in real-time).
+
+The REST API: You are going to build an HTTP server. It will run continuously in the background of your Mac. It will open a "Port" (a communication door) and listen for incoming data.
+
+The Payload: When a frontend website wants to use your AI, it will send an HTTP POST request containing a JSON payload (e.g., {"text": "My partner ignored me today."}). Your FastAPI server will catch that text, feed it to your saved DistilBERT model, get the prediction, and send a JSON response back: {"emotion": "ANGER_HOSTILITY", "confidence": 0.92}.
+
+⚡ Why FastAPI?
+Five years ago, everyone used a framework called Flask or Django. Today, the entire AI industry has moved to FastAPI.
+
+It is blindingly fast: It is built on modern asynchronous Python (async/await), meaning it can handle thousands of users asking for emotion predictions at the exact same time without crashing.
+
+Automatic Documentation: As you write your Python code, FastAPI automatically builds a beautiful, interactive web page (called Swagger UI) where you can test your AI visually.
+
+Data Validation: It strictly checks the data. If a user tries to send an image instead of text, FastAPI automatically rejects it before it crashes your AI.
+
+---
