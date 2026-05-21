@@ -92,10 +92,13 @@ def predict(request: PredictRequest):
     )
 
 
+# The Front Door
+@app.get("/")
+def root():
+    return {"message": "Clarify AI Server is awake and listening!"}
+
+# The Side Door (Health Check)
 @app.get("/health")
 def health():
-    # 1. Check if the model is awake yet
-    load_model_if_needed()
-
-    # 2. Return the health status
+    # DO NOT load the model here! This must reply instantly.
     return {"status": "ok", "model_loaded": model is not None}
