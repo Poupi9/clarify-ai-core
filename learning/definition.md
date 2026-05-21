@@ -340,3 +340,31 @@ Automatic Documentation: As you write your Python code, FastAPI automatically bu
 Data Validation: It strictly checks the data. If a user tries to send an image instead of text, FastAPI automatically rejects it before it crashes your AI.
 
 ---
+
+## Decoupled Microservices Deployment.
+
+Instead of putting everything in one massive, clunky server, you are separating the "Brain" (The FastAPI Backend) from the "Face" (The Next.js/HTML Frontend).
+
+This is exactly how modern companies build software. It allows you to update the UI on Vercel instantly without accidentally rebooting your heavy AI model on Render.
+
+---
+
+## Quick Lesson: What is CORS?
+
+CORS stands for Cross-Origin Resource Sharing. It's a security feature built into web browsers that controls how web pages can request resources from a different domain than the one that served the original page.
+
+**Why do we need CORS?**
+- By default, a web app at site A (like `myfrontend.com`) can't request data from site B (like `myapi.com`). This keeps your users safer and prevents sneaky sites from stealing data.
+- CORS lets your backend (API) tell browsers: "It's safe to allow site A to talk to me!"
+
+**How does it work?**
+- Your FastAPI backend returns special headers, like `Access-Control-Allow-Origin`, when it receives certain requests. This acts like a security green light.
+
+**Example:**  
+If your AI API is running at `http://localhost:8000`, and your site is at `http://localhost:3000`, enabling CORS lets them talk to each other safely during development.
+
+**Key Point:**  
+Always set your CORS rules thoughtfully—be specific about which sites can access your API!
+
+---
+

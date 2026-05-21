@@ -1,5 +1,6 @@
 import torch
 from fastapi import FastAPI
+from fastapi.middleware.cors import CORSMiddleware
 from pydantic import BaseModel
 from transformers import DistilBertTokenizerFast, DistilBertForSequenceClassification
 
@@ -12,10 +13,19 @@ ID_TO_LABEL = {
     4: "COMPLEX_SURPRISE",
 }
 
-MODEL_PATH = "./emotion_classifier_model/final_model"
+MODEL_PATH = "poupi9/clarify-emotion-classifier"
 
 # App & global model handles 
 app = FastAPI(title="Clarify Emotion Classifier", version="1.0.0")
+
+# CORS
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=["*"], # The VIP List. "*" means "Let absolutely every website in."
+    allow_credentials=True,
+    allow_methods=["*"], # Allows POST, GET, OPTIONS, etc.
+    allow_headers=["*"], # Allows all data headers
+)
 
 tokenizer: DistilBertTokenizerFast = None
 model: DistilBertForSequenceClassification = None
