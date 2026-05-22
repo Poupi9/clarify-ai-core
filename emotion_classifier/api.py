@@ -1,8 +1,15 @@
+import os
 import torch
+from dotenv import load_dotenv
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
+from google import genai
 from pydantic import BaseModel
 from transformers import DistilBertTokenizerFast, DistilBertForSequenceClassification
+
+load_dotenv()
+
+_gemini = genai.Client(api_key=os.getenv("GEMINI_API_KEY"))
 
 # Label mapping (mirrors preprocessor.py encode_labels) 
 ID_TO_LABEL = {
@@ -56,10 +63,40 @@ class PredictRequest(BaseModel):
     text: str
 
 
+EMOTION_CONTEXT = {
+    "ANGER_HOSTILITY":  "anger, aggression, or passive hostility",
+    "SADNESS_PAIN":     "sadness, emotional pain, or masked hurt",
+    "FEAR_ANXIETY":     "fear, anxiety, or insecurity",
+    "COMPLEX_SURPRISE": "complex feelings — confusion, being caught off guard, or mixed emotions",
+    "JOY_AFFECTION":    "genuine joy or affection",
+}
+
+
+def gemini_translation(text: str, emotion: str) -> str:
+    context = EMOTION_CONTEXT.get(emotion, emotion)
+    prompt = (
+        f'A person sent this message: "{text}"\n'
+        f"The underlying emotion detected is: {context}.\n"
+        "In exactly 1-2 sentences, explain what they really meant — be direct, "
+        "insightful, and a little brutally honest. Focus on the subtext and hidden "
+        "feeling, not the surface words. Do not start with 'They' every time."
+    )
+    try:
+        response = _gemini.models.generate_content(
+            model="gemini-2.5-flash",
+            contents=prompt,
+        )
+        return response.text.strip()
+    except Exception as e:
+        print(f"⚠️ Gemini error: {e}")
+        return "Translation unavailable right now."
+
+
 class PredictResponse(BaseModel):
     text: str
     emotion: str
     confidence: float
+    translation: str
 
 
 # Endpoint
@@ -85,10 +122,14 @@ def predict(request: PredictRequest):
     predicted_id = int(torch.argmax(probabilities).item())
     confidence = float(probabilities[predicted_id].item())
 
+    emotion = ID_TO_LABEL[predicted_id]
+    translation = gemini_translation(request.text, emotion)
+
     return PredictResponse(
         text=request.text,
-        emotion=ID_TO_LABEL[predicted_id],
+        emotion=emotion,
         confidence=round(confidence, 4),
+        translation=translation,
     )
 
 

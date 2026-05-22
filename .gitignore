@@ -10,3 +10,12 @@ __pycache__/
 *.pt
 *.safetensors
 checkpoint-*/
+
+# Hugging Face
+.huggingface/
+
+# Local model
+emotion_classifier_model/
+
+# Results
+results/
