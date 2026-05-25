@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Subtext Scanner | Clarify AI</title>
     <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2/dist/umd/supabase.min.js"></script>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
     <style>
         body {
@@ -218,7 +219,8 @@
         <div class="mb-6">
             <p class="text-xs font-semibold text-gray-400 uppercase tracking-widest mb-1">Clarify AI</p>
             <h1 class="text-2xl font-bold text-gray-900 leading-snug">What did they<br>really mean?</h1>
-            <p class="text-sm text-gray-500 mt-2">Paste any message. We'll decode the subtext.</p>
+            <p class="text-sm text-gray-500 mt-2">Get the reveal the real meaning behind their words.</p>
+      
         </div>
 
         <div id="input-section">
@@ -283,7 +285,7 @@
                 <p id="original-text" class="text-gray-800 italic text-sm">"..."</p>
             </div>
 
-            <div class="flex items-center justify-between mb-5">
+            <div class="flex items-center justify-between mb-3">
                 <div>
                     <p class="text-xs font-medium text-gray-400 uppercase tracking-wide mb-2">Detected emotion</p>
                     <span id="emotion-label" class="emotion-badge">—</span>
@@ -297,7 +299,39 @@
                 </div>
             </div>
 
-            <div class="mb-6">
+            <div id="correction-section" class="correction-section">
+                <div class="bg-gray-50 border border-gray-200 rounded-xl p-4">
+                    <p class="text-xs font-medium text-gray-400 uppercase tracking-wide mb-3">Which feels closer?</p>
+                    <div class="flex flex-col gap-2" id="emotion-options">
+                        <button class="emotion-option" data-emotion="ANGER_HOSTILITY">
+                            <span class="emoji">😤</span>
+                            <span>Anger / Hostility</span>
+                        </button>
+                        <button class="emotion-option" data-emotion="SADNESS_PAIN">
+                            <span class="emoji">💔</span>
+                            <span>Sadness / Pain</span>
+                        </button>
+                        <button class="emotion-option" data-emotion="FEAR_ANXIETY">
+                            <span class="emoji">😰</span>
+                            <span>Fear / Anxiety</span>
+                        </button>
+                        <button class="emotion-option" data-emotion="COMPLEX_SURPRISE">
+                            <span class="emoji">😶</span>
+                            <span>Complex / Surprise</span>
+                        </button>
+                        <button class="emotion-option" data-emotion="JOY_AFFECTION">
+                            <span class="emoji">🥰</span>
+                            <span>Joy / Affection</span>
+                        </button>
+                    </div>
+                    <button id="submit-correction" class="btn-primary w-full py-2.5 text-sm font-semibold mt-3">
+                        Submit correction
+                    </button>
+                    <p id="correction-thanks" class="hidden text-xs text-center text-gray-400 mt-3">Thanks — this helps us improve the model.</p>
+                </div>
+            </div>
+
+            <div class="mb-6 mt-5">
                 <p class="text-xs font-medium text-gray-400 uppercase tracking-wide mb-2">What it actually means</p>
                 <p id="brutal-translation" class="translation-box text-sm text-gray-700 p-4 leading-relaxed"></p>
             </div>
@@ -305,40 +339,12 @@
             <hr class="divider mb-6">
 
             <div class="text-center mb-6">
-                <p class="text-xs text-gray-500 mb-3">Don't reply with logic. Reply with Clarify.</p>
-                <a href="#" class="download-btn">Download Clarify
-                    <br>to improve your relationship</a>
-            </div>
-
-            <div id="correction-section" class="correction-section">
-                <hr class="divider mb-4">
-                <p class="text-xs font-medium text-gray-400 uppercase tracking-wide mb-3">Which feels closer?</p>
-                <div class="flex flex-col gap-2" id="emotion-options">
-                    <button class="emotion-option" data-emotion="ANGER_HOSTILITY">
-                        <span class="emoji">😤</span>
-                        <span>Anger / Hostility</span>
-                    </button>
-                    <button class="emotion-option" data-emotion="SADNESS_PAIN">
-                        <span class="emoji">💔</span>
-                        <span>Sadness / Pain</span>
-                    </button>
-                    <button class="emotion-option" data-emotion="FEAR_ANXIETY">
-                        <span class="emoji">😰</span>
-                        <span>Fear / Anxiety</span>
-                    </button>
-                    <button class="emotion-option" data-emotion="COMPLEX_SURPRISE">
-                        <span class="emoji">😶</span>
-                        <span>Complex / Surprise</span>
-                    </button>
-                    <button class="emotion-option" data-emotion="JOY_AFFECTION">
-                        <span class="emoji">🥰</span>
-                        <span>Joy / Affection</span>
-                    </button>
-                </div>
-                <button id="submit-correction" class="btn-primary w-full py-2.5 text-sm font-semibold mt-4">
-                    Submit correction
-                </button>
-                <p id="correction-thanks" class="hidden text-xs text-center text-gray-400 mt-3">Thanks for the feedback — it helps us improve.</p>
+                <p class="text-sm font-semibold text-gray-900 mb-1">One message decoded.<br>What about the whole relationship?</p>
+                <p class="text-xs text-gray-400 mb-4">Clarify tracks patterns, flags red flags,<br>and helps you communicate better — every day.</p>
+                <a href="https://apps.apple.com/us/app/clarify-couple-dairy/id6761012915" class="download-btn" target="_blank" rel="noopener">
+                    Analyse your relationship in Clarify
+                    <br> And answer to your partner's message
+                </a>
             </div>
         </div>
 
@@ -347,6 +353,35 @@
     <script>
         const API_URL = "https://clarify-ai-core.onrender.com/predict";
 
+        // --- Supabase ---
+        const SUPABASE_URL  = 'https://pmkwawobzqubvxrbrlnt.supabase.co';
+        const SUPABASE_KEY  = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InBta3dhd29ienF1YnZ4cmJybG50Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3Nzk2NjMyMDcsImV4cCI6MjA5NTIzOTIwN30.65WRLH8ThRZwhmDLqV7FME0kyiQteF6KVOyKfgbY4PI';
+        const db = window.supabase.createClient(SUPABASE_URL, SUPABASE_KEY);
+
+        let currentText     = '';
+        let currentEmotion  = '';
+        let feedbackRowId   = null;
+
+        async function logFeedback(isAccurate) {
+            const { data, error } = await db
+                .from('predictions_feedback')
+                .insert({ original_text: currentText, ai_prediction: currentEmotion, is_accurate: isAccurate })
+                .select('id')
+                .single();
+            if (data) feedbackRowId = data.id;
+            if (error) console.error('Supabase insert error:', error);
+        }
+
+        async function submitCorrection(correction) {
+            if (!feedbackRowId) return;
+            const { error } = await db
+                .from('predictions_feedback')
+                .update({ user_correction: correction })
+                .eq('id', feedbackRowId);
+            if (error) console.error('Supabase update error:', error);
+        }
+
+        // --- Feedback buttons ---
         const loadMessages = [
             "Extracting subtext...",
             "Reading between the lines...",
@@ -357,12 +392,15 @@
         document.getElementById('feedback-yes').addEventListener('click', () => {
             document.getElementById('feedback-yes').classList.add('selected');
             document.getElementById('feedback-no').classList.remove('selected');
+            document.getElementById('correction-section').classList.remove('open');
+            logFeedback(true);
         });
 
         document.getElementById('feedback-no').addEventListener('click', () => {
             document.getElementById('feedback-no').classList.add('selected');
             document.getElementById('feedback-yes').classList.remove('selected');
             document.getElementById('correction-section').classList.add('open');
+            logFeedback(false);
         });
 
         let selectedCorrection = null;
@@ -376,8 +414,9 @@
             });
         });
 
-        document.getElementById('submit-correction').addEventListener('click', () => {
+        document.getElementById('submit-correction').addEventListener('click', async () => {
             if (!selectedCorrection) return;
+            await submitCorrection(selectedCorrection);
             document.getElementById('submit-correction').classList.remove('visible');
             document.getElementById('correction-thanks').classList.remove('hidden');
             document.querySelectorAll('.emotion-option').forEach(b => b.disabled = true);
@@ -449,6 +488,10 @@
                     clearInterval(msgInterval);
                     document.getElementById('loading-section').classList.add('hidden');
                     document.getElementById('result-section').classList.remove('hidden');
+
+                    currentText    = data.text;
+                    currentEmotion = data.emotion;
+                    feedbackRowId  = null;
 
                     document.getElementById('original-text').innerText = `"${data.text}"`;
                     document.getElementById('emotion-label').innerText = data.emotion.replace(/_/g, ' ');
