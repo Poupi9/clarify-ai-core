@@ -1,9 +1,11 @@
+import base64
 import os
 import torch
 from dotenv import load_dotenv
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
 from google import genai
+from google.genai import types
 from pydantic import BaseModel
 from transformers import DistilBertTokenizerFast, DistilBertForSequenceClassification
 
@@ -58,9 +60,10 @@ def load_model_if_needed():
     print("✅ Model ready.")
 
 
-# Schemas 
+# Schemas
 class PredictRequest(BaseModel):
-    text: str
+    text: str = ""
+    image: str | None = None  # base64-encoded image (data URL or raw)
 
 
 EMOTION_CONTEXT = {
@@ -92,6 +95,40 @@ def gemini_translation(text: str, emotion: str) -> str:
         return "Translation unavailable right now."
 
 
+def extract_text_from_image(image_data_url: str) -> str:
+    # Strip the data URL prefix if present (e.g. "data:image/png;base64,...")
+    if "," in image_data_url:
+        header, b64 = image_data_url.split(",", 1)
+        mime_type = header.split(":")[1].split(";")[0]
+    else:
+        b64 = image_data_url
+        mime_type = "image/jpeg"
+
+    image_bytes = base64.b64decode(b64)
+
+    prompt = (
+        "This is a screenshot of a private text message conversation. "
+        "Extract all visible messages exactly as written. "
+        "Label each line with 'Them:' or 'Me:' based on the bubble position "
+        "(right-aligned = Me, left-aligned = Them). "
+        "If you cannot determine the sender, just output the message text. "
+        "Output only the conversation — no commentary, no explanations."
+    )
+
+    try:
+        response = _gemini.models.generate_content(
+            model="gemini-2.5-flash",
+            contents=[
+                types.Part.from_bytes(data=image_bytes, mime_type=mime_type),
+                types.Part.from_text(text=prompt),
+            ],
+        )
+        return response.text.strip()
+    except Exception as e:
+        print(f"⚠️ Gemini vision error: {e}")
+        return ""
+
+
 class PredictResponse(BaseModel):
     text: str
     emotion: str
@@ -102,12 +139,23 @@ class PredictResponse(BaseModel):
 # Endpoint
 @app.post("/predict", response_model=PredictResponse)
 def predict(request: PredictRequest):
-    # 1. Check if the model is awake yet
     load_model_if_needed()
 
-    # 2. Proceed with the normal prediction...
+    # If a screenshot is provided, extract its text via Gemini vision
+    if request.image:
+        extracted = extract_text_from_image(request.image)
+        text = extracted if extracted else request.text
+    else:
+        text = request.text
+
+    if not text:
+        return PredictResponse(
+            text="", emotion="COMPLEX_SURPRISE", confidence=0.0,
+            translation="No text could be extracted from the image."
+        )
+
     inputs = tokenizer(
-        request.text,
+        text,
         return_tensors="pt",
         padding="max_length",
         truncation=True,
@@ -123,10 +171,10 @@ def predict(request: PredictRequest):
     confidence = float(probabilities[predicted_id].item())
 
     emotion = ID_TO_LABEL[predicted_id]
-    translation = gemini_translation(request.text, emotion)
+    translation = gemini_translation(text, emotion)
 
     return PredictResponse(
-        text=request.text,
+        text=text,
         emotion=emotion,
         confidence=round(confidence, 4),
         translation=translation,
